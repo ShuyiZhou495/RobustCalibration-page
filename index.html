@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robust LiDAR-Camera Calibration with 2D Gaussian Splatting</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Academicons for academic icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Robust LiDAR-Camera Calibration with 2D Gaussian Splatting</h1>
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 0.2em;">
+            Shuyi Zhou, Shuxiang Xie, Ryoichi Ishikawa, Takeshi Oishi
+        </p>
+        <p style="text-align: center; color: #555; margin-top: 0;">
+            The University of Tokyo
+        </p>
+        <p style="text-align: center; font-weight: bold; margin: 20px 0;">
+            Accepted to IEEE Robotics and Automation Letters (Ra-L), 2025
+        </p>
+        <div class="links">
+            <a href="https://arxiv.org/html/2504.00525v1" target="_blank" title="Arxiv"><i class="ai ai-arxiv"></i> Arxiv</a>
+            <a href="https://github.com/ShuyiZhou495/RobustCalibration" target="_blank" title="Code"><i class="fab fa-github"></i> Code</a>
+            <a href="https://github.com/ShuyiZhou495/RobustCalibration?tab=readme-ov-file#data" target="_blank" title="Data"><i class="fas fa-database"></i> Data</a>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10933576" target="_blank" title="IEEE Xplore"><i class="ai ai-ieee"></i> IEEE Xplore</a>
+            <a href="https://github.com/ShuyiZhou495/RobustCalibration/blob/main/assets/appendix.pdf" target="_blank" title="Appendix"><i class="fas fa-file-alt"></i> Appendix</a>
+        </div>
+        <section class="introduction">
+            <h2>Introduction</h2>
+            <p>
+                We present a robust method for LiDAR-camera calibration leveraging 2D Gaussian Splatting.The proposed method begins by reconstructing colorless 2DGS using LiDAR point clouds. Subsequently, we update the colors of the Gaussian splats by minimizing the photometric loss. The extrinsic parameters are optimized during this process. Additionally, we address the limitations of the photometric loss by incorporating the reprojection and triangulation losses, thereby enhancing the calibration robustness and accuracy.
+            </p>
+            <img src="workflow.png" alt="Teaser Image" class="teaser">
+        </section>
+        <section class="gifs">
+            <div class="gif-column">
+                <h3>Training Process of 2DGS Geometry</h3>
+                <video src="depth.mp4" alt="Depth Estimation Demo" controls loop muted playsinline style="max-width:100%;"></video>
+                <p class="video-description">Visualization of 2DGS geometry training process.</p>
+            </div>
+            <div class="gif-column">
+                <h3>Calibration Process</h3>
+                <video src="out.mp4" alt="Calibration Results Demo" controls loop muted playsinline style="max-width:100%;"></video>
+                <p class="video-description">Simultaneous LiDAR-camera cailbration and coloring for 2DGS.</p>
+            </div>
+        </section>
+        <section>
+            <h2>BibTeX</h2>
+            <pre  class="bibtex">
+@article{zhou2025robust,
+  title={Robust LiDAR-Camera Calibration With 2D Gaussian Splatting},
+  author={Zhou, Shuyi and Xie, Shuxiang and Ishikawa, Ryoichi and Oishi, Takeshi},
+  journal={IEEE Robotics and Automation Letters},
+  year={2025},
+  publisher={IEEE}
+}
+            </pre>
+        </section>
+    </div>
+</body>
+</html>
