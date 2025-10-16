@@ -116,7 +116,29 @@ h1 {
 	font-family: 'Fira Mono', 'Consolas', monospace;
 	margin: 0;
 	padding: 0;
-	white-space: pre-wrap;
+	white-space: pre;
+	overflow-x: auto;
+	max-width: 100%;
+	border-radius: 4px;
+	scrollbar-width: thin;
+	scrollbar-color: #ccc transparent;
+}
+
+.bibtex pre::-webkit-scrollbar {
+	height: 6px;
+}
+
+.bibtex pre::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.bibtex pre::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 3px;
+}
+
+.bibtex pre::-webkit-scrollbar-thumb:hover {
+	background: #999;
 }
 
 @media (max-width: 700px) {
